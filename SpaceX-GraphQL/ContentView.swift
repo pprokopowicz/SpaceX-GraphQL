@@ -8,14 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var pastLaunches: [PastLaunchesQueryQuery.Data.LaunchesPast] = []
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        List(pastLaunches, id: \.id) { launch in
+            Text(launch.missionName ?? "Missing name")
         }
-        .padding()
+        .onAppear {
+            Network.shared.apollo.fetch(query: PastLaunchesQueryQuery()) { result in
+                switch result {
+                case .success(let response):
+                    guard let data = response.data else { return }
+                    pastLaunches = data.launchesPast?.compactMap { $0 } ?? []
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+        }
     }
 }
 
