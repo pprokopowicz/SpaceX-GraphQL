@@ -1,0 +1,15 @@
+query PastLaunchesQuery {
+  launchesPast(limit: 10) {
+    mission_name
+    launch_date_local
+    launch_site {
+      site_name_long
+      site_id
+    }
+    rocket {
+      rocket_name
+    }
+    id
+    details
+  }
+}
