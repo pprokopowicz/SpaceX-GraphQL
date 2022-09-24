@@ -11,6 +11,8 @@ public final class PastLaunchesQueryQuery: GraphQLQuery {
     query PastLaunchesQuery($limit: Int!) {
       launchesPast(limit: $limit) {
         __typename
+        id
+        details
         mission_name
         launch_date_local
         launch_site {
@@ -22,8 +24,6 @@ public final class PastLaunchesQueryQuery: GraphQLQuery {
           __typename
           rocket_name
         }
-        id
-        details
       }
     }
     """
@@ -74,12 +74,12 @@ public final class PastLaunchesQueryQuery: GraphQLQuery {
       public static var selections: [GraphQLSelection] {
         return [
           GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+          GraphQLField("id", type: .scalar(GraphQLID.self)),
+          GraphQLField("details", type: .scalar(String.self)),
           GraphQLField("mission_name", type: .scalar(String.self)),
           GraphQLField("launch_date_local", type: .scalar(String.self)),
           GraphQLField("launch_site", type: .object(LaunchSite.selections)),
           GraphQLField("rocket", type: .object(Rocket.selections)),
-          GraphQLField("id", type: .scalar(GraphQLID.self)),
-          GraphQLField("details", type: .scalar(String.self)),
         ]
       }
 
@@ -89,8 +89,8 @@ public final class PastLaunchesQueryQuery: GraphQLQuery {
         self.resultMap = unsafeResultMap
       }
 
-      public init(missionName: String? = nil, launchDateLocal: String? = nil, launchSite: LaunchSite? = nil, rocket: Rocket? = nil, id: GraphQLID? = nil, details: String? = nil) {
-        self.init(unsafeResultMap: ["__typename": "Launch", "mission_name": missionName, "launch_date_local": launchDateLocal, "launch_site": launchSite.flatMap { (value: LaunchSite) -> ResultMap in value.resultMap }, "rocket": rocket.flatMap { (value: Rocket) -> ResultMap in value.resultMap }, "id": id, "details": details])
+      public init(id: GraphQLID? = nil, details: String? = nil, missionName: String? = nil, launchDateLocal: String? = nil, launchSite: LaunchSite? = nil, rocket: Rocket? = nil) {
+        self.init(unsafeResultMap: ["__typename": "Launch", "id": id, "details": details, "mission_name": missionName, "launch_date_local": launchDateLocal, "launch_site": launchSite.flatMap { (value: LaunchSite) -> ResultMap in value.resultMap }, "rocket": rocket.flatMap { (value: Rocket) -> ResultMap in value.resultMap }])
       }
 
       public var __typename: String {
@@ -99,6 +99,24 @@ public final class PastLaunchesQueryQuery: GraphQLQuery {
         }
         set {
           resultMap.updateValue(newValue, forKey: "__typename")
+        }
+      }
+
+      public var id: GraphQLID? {
+        get {
+          return resultMap["id"] as? GraphQLID
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "id")
+        }
+      }
+
+      public var details: String? {
+        get {
+          return resultMap["details"] as? String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "details")
         }
       }
 
@@ -135,24 +153,6 @@ public final class PastLaunchesQueryQuery: GraphQLQuery {
         }
         set {
           resultMap.updateValue(newValue?.resultMap, forKey: "rocket")
-        }
-      }
-
-      public var id: GraphQLID? {
-        get {
-          return resultMap["id"] as? GraphQLID
-        }
-        set {
-          resultMap.updateValue(newValue, forKey: "id")
-        }
-      }
-
-      public var details: String? {
-        get {
-          return resultMap["details"] as? String
-        }
-        set {
-          resultMap.updateValue(newValue, forKey: "details")
         }
       }
 
