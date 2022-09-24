@@ -22,12 +22,22 @@ struct LaunchesView<ViewModel: LaunchesViewModel>: View {
     // MARK: - View
     
     var body: some View {
-        List(viewModel.launchItems) { launch in
-            Text(launch.missionName)
+        Group {
+            switch viewModel.viewState {
+            case .empty:
+                Text("Empty")
+            case .loading:
+                ProgressView()
+            case .content(let items):
+                List(items) { launch in
+                    Text(launch.missionName)
+                }
+            }
         }
         .onAppear {
             viewModel.handle(action: .viewIsReady)
         }
+        .navigationTitle("SpaceX")
     }
 }
 

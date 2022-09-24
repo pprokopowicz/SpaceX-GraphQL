@@ -12,7 +12,7 @@ final class LaunchesViewModelImpl: LaunchesViewModel {
     
     // MARK: - Property
     
-    @Published private(set) var launchItems: [LaunchItem]
+    @Published private(set) var viewState: ViewState<[LaunchItem]>
     private let pastLaunchesUseCase: PastLaunchUseCase
     private var cancellables: Set<AnyCancellable>
     
@@ -20,7 +20,7 @@ final class LaunchesViewModelImpl: LaunchesViewModel {
     
     init(pastLaunchesUseCase: PastLaunchUseCase) {
         self.pastLaunchesUseCase = pastLaunchesUseCase
-        self.launchItems = []
+        self.viewState = .empty
         self.cancellables =  []
     }
     
@@ -34,6 +34,7 @@ final class LaunchesViewModelImpl: LaunchesViewModel {
     }
     
     private func fetchData() {
+        viewState = .loading
         pastLaunchesUseCase.execute()
             .receive(on: RunLoop.main)
             .sink { [weak self] data in
@@ -45,7 +46,8 @@ final class LaunchesViewModelImpl: LaunchesViewModel {
     }
     
     private func feedView(with model: [PastLaunch]) {
-        launchItems = model.map { LaunchItem(id: $0.id, missionName: $0.missionName) }
+        let items = model.map { LaunchItem(id: $0.id, missionName: $0.missionName) }
+        viewState = .content(items)
     }
     
 }

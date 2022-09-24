@@ -10,7 +10,7 @@ import Foundation
 // MARK: - Protocol
 
 protocol LaunchesViewModel: ObservableObject {
-    var launchItems: [LaunchItem] { get }
+    var viewState: ViewState<[LaunchItem]> { get }
     func handle(action: LaunchesAction)
 }
 
