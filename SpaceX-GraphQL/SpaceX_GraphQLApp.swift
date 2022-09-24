@@ -21,7 +21,7 @@ struct SpaceX_GraphQLApp: App {
     
     var body: some Scene {
         WindowGroup {
-            LaunchesView()
+            LaunchesView(viewModel: assembler.resolver.resolve(LaunchesViewModelImpl.self)!)
         }
     }
 }

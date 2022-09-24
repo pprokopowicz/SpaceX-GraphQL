@@ -6,31 +6,27 @@
 //
 
 import SwiftUI
-import Combine
 
-struct LaunchesView: View {
+struct LaunchesView<ViewModel: LaunchesViewModel>: View {
     
-    @State var pastLaunches: [PastLaunchesQuery.Data.LaunchesPast] = []
-    @State var cancellable: AnyCancellable?
+    @ObservedObject private var viewModel: ViewModel
+    
+    init(viewModel: ViewModel) {
+        self.viewModel = viewModel
+    }
     
     var body: some View {
-        List(pastLaunches, id: \.id) { launch in
-            Text(launch.missionName ?? "Missing name")
+        List(viewModel.launchItems) { launch in
+            Text(launch.missionName)
         }
         .onAppear {
-            cancellable = Network.shared.fetch(query: PastLaunchesQuery(limit: 20))
-                .receive(on: RunLoop.main)
-                .sink { data in
-                    pastLaunches = data.launchesPast?.compactMap { $0 } ?? []
-                } onFailure: { error in
-                    print(error.localizedDescription)
-                }
+            viewModel.handle(action: .viewIsReady)
         }
     }
 }
 
-struct LaunchesView_Previews: PreviewProvider {
-    static var previews: some View {
-        LaunchesView()
-    }
-}
+//struct LaunchesView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LaunchesView()
+//    }
+//}

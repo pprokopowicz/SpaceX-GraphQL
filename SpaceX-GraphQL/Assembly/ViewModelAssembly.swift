@@ -10,7 +10,7 @@ import Swinject
 
 struct ViewModelAssembly: Assembly {
     func assemble(container: Swinject.Container) {
-        container.register((any LaunchesViewModel).self) { (resolver: Swinject.Resolver) in
+        container.register(LaunchesViewModelImpl.self) { (resolver: Swinject.Resolver) in
             LaunchesViewModelImpl(pastLaunchesUseCase: resolver.resolve(PastLaunchUseCase.self)!)
         }
     }
