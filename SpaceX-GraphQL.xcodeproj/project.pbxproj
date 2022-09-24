@@ -20,6 +20,12 @@
 		2483628528DEF33100413A91 /* PastLaunchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2483628428DEF33100413A91 /* PastLaunchUseCase.swift */; };
 		2483628728DEF8FB00413A91 /* LaunchItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2483628628DEF8FB00413A91 /* LaunchItem.swift */; };
 		2483628928DEF92900413A91 /* LaunchesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2483628828DEF92900413A91 /* LaunchesViewModel.swift */; };
+		2483628C28DEFCDF00413A91 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 2483628B28DEFCDF00413A91 /* Swinject */; };
+		2483628F28DEFD2B00413A91 /* CoreAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2483628E28DEFD2B00413A91 /* CoreAssembly.swift */; };
+		2483629128DEFD8300413A91 /* RepositoryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2483629028DEFD8300413A91 /* RepositoryAssembly.swift */; };
+		2483629328DEFE6900413A91 /* MapperAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2483629228DEFE6900413A91 /* MapperAssembly.swift */; };
+		2483629528DEFE9100413A91 /* UseCaseAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2483629428DEFE9100413A91 /* UseCaseAssembly.swift */; };
+		2483629728DEFECC00413A91 /* ViewModelAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2483629628DEFECC00413A91 /* ViewModelAssembly.swift */; };
 		24AF098928DE31A40030EDCF /* SpaceX_GraphQLApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AF098828DE31A40030EDCF /* SpaceX_GraphQLApp.swift */; };
 		24AF098B28DE31A40030EDCF /* LaunchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AF098A28DE31A40030EDCF /* LaunchesView.swift */; };
 		24AF098D28DE31A50030EDCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24AF098C28DE31A50030EDCF /* Assets.xcassets */; };
@@ -40,6 +46,11 @@
 		2483628428DEF33100413A91 /* PastLaunchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastLaunchUseCase.swift; sourceTree = "<group>"; };
 		2483628628DEF8FB00413A91 /* LaunchItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchItem.swift; sourceTree = "<group>"; };
 		2483628828DEF92900413A91 /* LaunchesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesViewModel.swift; sourceTree = "<group>"; };
+		2483628E28DEFD2B00413A91 /* CoreAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAssembly.swift; sourceTree = "<group>"; };
+		2483629028DEFD8300413A91 /* RepositoryAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryAssembly.swift; sourceTree = "<group>"; };
+		2483629228DEFE6900413A91 /* MapperAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperAssembly.swift; sourceTree = "<group>"; };
+		2483629428DEFE9100413A91 /* UseCaseAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseAssembly.swift; sourceTree = "<group>"; };
+		2483629628DEFECC00413A91 /* ViewModelAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelAssembly.swift; sourceTree = "<group>"; };
 		24AF098528DE31A40030EDCF /* SpaceX-GraphQL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpaceX-GraphQL.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24AF098828DE31A40030EDCF /* SpaceX_GraphQLApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceX_GraphQLApp.swift; sourceTree = "<group>"; };
 		24AF098A28DE31A40030EDCF /* LaunchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesView.swift; sourceTree = "<group>"; };
@@ -54,6 +65,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				246960D528DE419A005D74D6 /* Apollo in Frameworks */,
+				2483628C28DEFCDF00413A91 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +193,18 @@
 			path = Launch;
 			sourceTree = "<group>";
 		};
+		2483628D28DEFCFB00413A91 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				2483628E28DEFD2B00413A91 /* CoreAssembly.swift */,
+				2483629028DEFD8300413A91 /* RepositoryAssembly.swift */,
+				2483629228DEFE6900413A91 /* MapperAssembly.swift */,
+				2483629428DEFE9100413A91 /* UseCaseAssembly.swift */,
+				2483629628DEFECC00413A91 /* ViewModelAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
 		24AF097C28DE31A40030EDCF = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +224,7 @@
 		24AF098728DE31A40030EDCF /* SpaceX-GraphQL */ = {
 			isa = PBXGroup;
 			children = (
+				2483628D28DEFCFB00413A91 /* Assembly */,
 				2483626B28DEEDA100413A91 /* Data */,
 				2483627728DEF18900413A91 /* Domain */,
 				2483627328DEF11F00413A91 /* Modules */,
@@ -239,6 +264,7 @@
 			name = "SpaceX-GraphQL";
 			packageProductDependencies = (
 				246960D428DE419A005D74D6 /* Apollo */,
+				2483628B28DEFCDF00413A91 /* Swinject */,
 			);
 			productName = "SpaceX-GraphQL";
 			productReference = 24AF098528DE31A40030EDCF /* SpaceX-GraphQL.app */;
@@ -270,6 +296,7 @@
 			mainGroup = 24AF097C28DE31A40030EDCF;
 			packageReferences = (
 				246960D328DE419A005D74D6 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				2483628A28DEFCDF00413A91 /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			productRefGroup = 24AF098628DE31A40030EDCF /* Products */;
 			projectDirPath = "";
@@ -324,14 +351,19 @@
 				24AF098B28DE31A40030EDCF /* LaunchesView.swift in Sources */,
 				2483628928DEF92900413A91 /* LaunchesViewModel.swift in Sources */,
 				2483627228DEEE3700413A91 /* PastLaunchRepository.swift in Sources */,
+				2483629328DEFE6900413A91 /* MapperAssembly.swift in Sources */,
+				2483629128DEFD8300413A91 /* RepositoryAssembly.swift in Sources */,
 				246960D728DE41FC005D74D6 /* API.swift in Sources */,
 				246960DB28DE4281005D74D6 /* Network.swift in Sources */,
+				2483629528DEFE9100413A91 /* UseCaseAssembly.swift in Sources */,
 				24605F7C28DE4E6200C79BCC /* Publisher+Additions.swift in Sources */,
 				2483627D28DEF1F600413A91 /* PastLaunch.swift in Sources */,
 				24AF098928DE31A40030EDCF /* SpaceX_GraphQLApp.swift in Sources */,
+				2483629728DEFECC00413A91 /* ViewModelAssembly.swift in Sources */,
 				2483628528DEF33100413A91 /* PastLaunchUseCase.swift in Sources */,
 				2483628728DEF8FB00413A91 /* LaunchItem.swift in Sources */,
 				2483628028DEF20D00413A91 /* PastLaunchMapper.swift in Sources */,
+				2483628F28DEFD2B00413A91 /* CoreAssembly.swift in Sources */,
 				2483628228DEF2D500413A91 /* MappingError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -543,6 +575,14 @@
 				minimumVersion = 0.9.5;
 			};
 		};
+		2483628A28DEFCDF00413A91 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -550,6 +590,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 246960D328DE419A005D74D6 /* XCRemoteSwiftPackageReference "apollo-ios" */;
 			productName = Apollo;
+		};
+		2483628B28DEFCDF00413A91 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2483628A28DEFCDF00413A91 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

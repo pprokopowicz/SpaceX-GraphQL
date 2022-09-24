@@ -6,9 +6,19 @@
 //
 
 import SwiftUI
+import Swinject
 
 @main
 struct SpaceX_GraphQLApp: App {
+    
+    private let assembler: Assembler = Assembler([
+        CoreAssembly(),
+        RepositoryAssembly(),
+        MapperAssembly(),
+        UseCaseAssembly(),
+        ViewModelAssembly()
+    ])
+    
     var body: some Scene {
         WindowGroup {
             LaunchesView()

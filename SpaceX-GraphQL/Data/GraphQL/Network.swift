@@ -15,8 +15,6 @@ final class Network {
         case unknown
     }
     
-    private init() {}
-    
     static let shared: Network = Network()
     private let apollo: ApolloClient = ApolloClient(url: URL(string: "https://api.spacex.land/graphql/")!)
     
