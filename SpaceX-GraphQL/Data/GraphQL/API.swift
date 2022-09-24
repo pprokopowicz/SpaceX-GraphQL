@@ -4,11 +4,11 @@
 import Apollo
 import Foundation
 
-public final class PastLaunchesQueryQuery: GraphQLQuery {
+public final class PastLaunchesQuery: GraphQLQuery {
   /// The raw GraphQL definition of this operation.
   public let operationDefinition: String =
     """
-    query PastLaunchesQuery($limit: Int!) {
+    query PastLaunches($limit: Int!) {
       launchesPast(limit: $limit) {
         __typename
         id
@@ -28,7 +28,7 @@ public final class PastLaunchesQueryQuery: GraphQLQuery {
     }
     """
 
-  public let operationName: String = "PastLaunchesQuery"
+  public let operationName: String = "PastLaunches"
 
   public var limit: Int
 

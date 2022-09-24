@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		24605F7C28DE4E6200C79BCC /* Publisher+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24605F7B28DE4E6200C79BCC /* Publisher+Additions.swift */; };
-		246960D128DE40CC005D74D6 /* PastLaunchesQuery.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 246960D028DE40CC005D74D6 /* PastLaunchesQuery.graphql */; };
+		246960D128DE40CC005D74D6 /* PastLaunches.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 246960D028DE40CC005D74D6 /* PastLaunches.graphql */; };
 		246960D528DE419A005D74D6 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 246960D428DE419A005D74D6 /* Apollo */; };
 		246960D728DE41FC005D74D6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246960D628DE41FC005D74D6 /* API.swift */; };
 		246960DB28DE4281005D74D6 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246960DA28DE4281005D74D6 /* Network.swift */; };
@@ -27,7 +27,7 @@
 
 /* Begin PBXFileReference section */
 		24605F7B28DE4E6200C79BCC /* Publisher+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Additions.swift"; sourceTree = "<group>"; };
-		246960D028DE40CC005D74D6 /* PastLaunchesQuery.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = PastLaunchesQuery.graphql; sourceTree = "<group>"; };
+		246960D028DE40CC005D74D6 /* PastLaunches.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = PastLaunches.graphql; sourceTree = "<group>"; };
 		246960D628DE41FC005D74D6 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		246960DA28DE4281005D74D6 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		2483626D28DEEE0900413A91 /* LaunchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchRepository.swift; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 		2483626C28DEEDAC00413A91 /* Queries */ = {
 			isa = PBXGroup;
 			children = (
-				246960D028DE40CC005D74D6 /* PastLaunchesQuery.graphql */,
+				246960D028DE40CC005D74D6 /* PastLaunches.graphql */,
 			);
 			path = Queries;
 			sourceTree = "<group>";
@@ -280,7 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24AF099028DE31A50030EDCF /* Preview Assets.xcassets in Resources */,
-				246960D128DE40CC005D74D6 /* PastLaunchesQuery.graphql in Resources */,
+				246960D128DE40CC005D74D6 /* PastLaunches.graphql in Resources */,
 				24AF099728DE31AE0030EDCF /* schema.json in Resources */,
 				24AF098D28DE31A50030EDCF /* Assets.xcassets in Resources */,
 			);

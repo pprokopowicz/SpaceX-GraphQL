@@ -10,7 +10,7 @@ import Combine
 
 struct LaunchesView: View {
     
-    @State var pastLaunches: [PastLaunchesQueryQuery.Data.LaunchesPast] = []
+    @State var pastLaunches: [PastLaunchesQuery.Data.LaunchesPast] = []
     @State var cancellable: AnyCancellable?
     
     var body: some View {
@@ -18,7 +18,7 @@ struct LaunchesView: View {
             Text(launch.missionName ?? "Missing name")
         }
         .onAppear {
-            cancellable = Network.shared.fetch(query: PastLaunchesQueryQuery(limit: 20))
+            cancellable = Network.shared.fetch(query: PastLaunchesQuery(limit: 20))
                 .receive(on: RunLoop.main)
                 .sink { data in
                     pastLaunches = data.launchesPast?.compactMap { $0 } ?? []

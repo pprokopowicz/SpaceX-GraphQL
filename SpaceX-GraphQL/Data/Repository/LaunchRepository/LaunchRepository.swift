@@ -18,7 +18,7 @@ final class LaunchRepositoryImpl: LaunchRepository {
         self.network = network
     }
     
-    func pastLaunches(limit: Int) -> AnyPublisher<PastLaunchesQueryQuery.Data, Error> {
-        network.fetch(query: PastLaunchesQueryQuery(limit: limit))
+    func pastLaunches(limit: Int) -> AnyPublisher<PastLaunchesQuery.Data, Error> {
+        network.fetch(query: PastLaunchesQuery(limit: limit))
     }
 }

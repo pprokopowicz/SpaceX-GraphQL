@@ -1,4 +1,4 @@
-query PastLaunchesQuery($limit: Int!) {
+query PastLaunches($limit: Int!) {
   launchesPast(limit: $limit) {
     id
     details
