@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 
-struct ContentView: View {
+struct LaunchesView: View {
     
     @State var pastLaunches: [PastLaunchesQueryQuery.Data.LaunchesPast] = []
     @State var cancellable: AnyCancellable?
@@ -29,8 +29,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct LaunchesView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        LaunchesView()
     }
 }

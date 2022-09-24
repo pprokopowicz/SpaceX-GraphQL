@@ -11,7 +11,7 @@ import SwiftUI
 struct SpaceX_GraphQLApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LaunchesView()
         }
     }
 }

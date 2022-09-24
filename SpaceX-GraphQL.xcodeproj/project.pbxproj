@@ -15,7 +15,7 @@
 		2483626E28DEEE0900413A91 /* LaunchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2483626D28DEEE0900413A91 /* LaunchRepository.swift */; };
 		2483627228DEEE3700413A91 /* PastLaunchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2483627128DEEE3700413A91 /* PastLaunchRepository.swift */; };
 		24AF098928DE31A40030EDCF /* SpaceX_GraphQLApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AF098828DE31A40030EDCF /* SpaceX_GraphQLApp.swift */; };
-		24AF098B28DE31A40030EDCF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AF098A28DE31A40030EDCF /* ContentView.swift */; };
+		24AF098B28DE31A40030EDCF /* LaunchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AF098A28DE31A40030EDCF /* LaunchesView.swift */; };
 		24AF098D28DE31A50030EDCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24AF098C28DE31A50030EDCF /* Assets.xcassets */; };
 		24AF099028DE31A50030EDCF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24AF098F28DE31A50030EDCF /* Preview Assets.xcassets */; };
 		24AF099728DE31AE0030EDCF /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 24AF099628DE31AE0030EDCF /* schema.json */; };
@@ -30,7 +30,7 @@
 		2483627128DEEE3700413A91 /* PastLaunchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastLaunchRepository.swift; sourceTree = "<group>"; };
 		24AF098528DE31A40030EDCF /* SpaceX-GraphQL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpaceX-GraphQL.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24AF098828DE31A40030EDCF /* SpaceX_GraphQLApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceX_GraphQLApp.swift; sourceTree = "<group>"; };
-		24AF098A28DE31A40030EDCF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		24AF098A28DE31A40030EDCF /* LaunchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesView.swift; sourceTree = "<group>"; };
 		24AF098C28DE31A50030EDCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24AF098F28DE31A50030EDCF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		24AF099628DE31AE0030EDCF /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 				2483626B28DEEDA100413A91 /* Data */,
 				24AF099628DE31AE0030EDCF /* schema.json */,
 				24AF098828DE31A40030EDCF /* SpaceX_GraphQLApp.swift */,
-				24AF098A28DE31A40030EDCF /* ContentView.swift */,
+				24AF098A28DE31A40030EDCF /* LaunchesView.swift */,
 				24AF098C28DE31A50030EDCF /* Assets.xcassets */,
 				24AF098E28DE31A50030EDCF /* Preview Content */,
 				24605F7B28DE4E6200C79BCC /* Publisher+Additions.swift */,
@@ -231,7 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2483626E28DEEE0900413A91 /* LaunchRepository.swift in Sources */,
-				24AF098B28DE31A40030EDCF /* ContentView.swift in Sources */,
+				24AF098B28DE31A40030EDCF /* LaunchesView.swift in Sources */,
 				2483627228DEEE3700413A91 /* PastLaunchRepository.swift in Sources */,
 				246960D728DE41FC005D74D6 /* API.swift in Sources */,
 				246960DB28DE4281005D74D6 /* Network.swift in Sources */,
