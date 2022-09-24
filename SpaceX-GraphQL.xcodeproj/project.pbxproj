@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		243F8CCF28DF13A200916539 /* LaunchesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F8CCE28DF13A200916539 /* LaunchesViewModel.swift */; };
+		243F8CD128DF13DD00916539 /* NetworkImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F8CD028DF13DD00916539 /* NetworkImpl.swift */; };
 		24605F7C28DE4E6200C79BCC /* Publisher+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24605F7B28DE4E6200C79BCC /* Publisher+Additions.swift */; };
 		246960D128DE40CC005D74D6 /* PastLaunches.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 246960D028DE40CC005D74D6 /* PastLaunches.graphql */; };
 		246960D528DE419A005D74D6 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 246960D428DE419A005D74D6 /* Apollo */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		243F8CCE28DF13A200916539 /* LaunchesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesViewModel.swift; sourceTree = "<group>"; };
+		243F8CD028DF13DD00916539 /* NetworkImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImpl.swift; sourceTree = "<group>"; };
 		24605F7B28DE4E6200C79BCC /* Publisher+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Additions.swift"; sourceTree = "<group>"; };
 		246960D028DE40CC005D74D6 /* PastLaunches.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = PastLaunches.graphql; sourceTree = "<group>"; };
 		246960D628DE41FC005D74D6 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				2483626C28DEEDAC00413A91 /* Queries */,
 				246960D628DE41FC005D74D6 /* API.swift */,
 				246960DA28DE4281005D74D6 /* Network.swift */,
+				243F8CD028DF13DD00916539 /* NetworkImpl.swift */,
 			);
 			path = GraphQL;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				24605F7C28DE4E6200C79BCC /* Publisher+Additions.swift in Sources */,
 				2483627D28DEF1F600413A91 /* PastLaunch.swift in Sources */,
 				243F8CCF28DF13A200916539 /* LaunchesViewModel.swift in Sources */,
+				243F8CD128DF13DD00916539 /* NetworkImpl.swift in Sources */,
 				24AF098928DE31A40030EDCF /* SpaceX_GraphQLApp.swift in Sources */,
 				2483629728DEFECC00413A91 /* ViewModelAssembly.swift in Sources */,
 				2483628528DEF33100413A91 /* PastLaunchUseCase.swift in Sources */,
