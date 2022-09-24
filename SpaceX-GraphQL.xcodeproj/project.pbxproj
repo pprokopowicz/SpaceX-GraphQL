@@ -14,6 +14,10 @@
 		246960DB28DE4281005D74D6 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246960DA28DE4281005D74D6 /* Network.swift */; };
 		2483626E28DEEE0900413A91 /* LaunchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2483626D28DEEE0900413A91 /* LaunchRepository.swift */; };
 		2483627228DEEE3700413A91 /* PastLaunchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2483627128DEEE3700413A91 /* PastLaunchRepository.swift */; };
+		2483627D28DEF1F600413A91 /* PastLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2483627C28DEF1F600413A91 /* PastLaunch.swift */; };
+		2483628028DEF20D00413A91 /* PastLaunchMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2483627F28DEF20D00413A91 /* PastLaunchMapper.swift */; };
+		2483628228DEF2D500413A91 /* MappingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2483628128DEF2D500413A91 /* MappingError.swift */; };
+		2483628528DEF33100413A91 /* PastLaunchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2483628428DEF33100413A91 /* PastLaunchUseCase.swift */; };
 		24AF098928DE31A40030EDCF /* SpaceX_GraphQLApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AF098828DE31A40030EDCF /* SpaceX_GraphQLApp.swift */; };
 		24AF098B28DE31A40030EDCF /* LaunchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AF098A28DE31A40030EDCF /* LaunchesView.swift */; };
 		24AF098D28DE31A50030EDCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24AF098C28DE31A50030EDCF /* Assets.xcassets */; };
@@ -28,6 +32,10 @@
 		246960DA28DE4281005D74D6 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		2483626D28DEEE0900413A91 /* LaunchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchRepository.swift; sourceTree = "<group>"; };
 		2483627128DEEE3700413A91 /* PastLaunchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastLaunchRepository.swift; sourceTree = "<group>"; };
+		2483627C28DEF1F600413A91 /* PastLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastLaunch.swift; sourceTree = "<group>"; };
+		2483627F28DEF20D00413A91 /* PastLaunchMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastLaunchMapper.swift; sourceTree = "<group>"; };
+		2483628128DEF2D500413A91 /* MappingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappingError.swift; sourceTree = "<group>"; };
+		2483628428DEF33100413A91 /* PastLaunchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastLaunchUseCase.swift; sourceTree = "<group>"; };
 		24AF098528DE31A40030EDCF /* SpaceX-GraphQL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpaceX-GraphQL.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24AF098828DE31A40030EDCF /* SpaceX_GraphQLApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceX_GraphQLApp.swift; sourceTree = "<group>"; };
 		24AF098A28DE31A40030EDCF /* LaunchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesView.swift; sourceTree = "<group>"; };
@@ -92,6 +100,81 @@
 			path = LaunchRepository;
 			sourceTree = "<group>";
 		};
+		2483627328DEF11F00413A91 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				2483627428DEF12900413A91 /* Launches */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		2483627428DEF12900413A91 /* Launches */ = {
+			isa = PBXGroup;
+			children = (
+				24AF098A28DE31A40030EDCF /* LaunchesView.swift */,
+			);
+			path = Launches;
+			sourceTree = "<group>";
+		};
+		2483627728DEF18900413A91 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				2483627928DEF19B00413A91 /* Mapper */,
+				2483627828DEF19400413A91 /* Model */,
+				2483627A28DEF19F00413A91 /* UseCase */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		2483627828DEF19400413A91 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2483627B28DEF1E700413A91 /* Launch */,
+				2483628128DEF2D500413A91 /* MappingError.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2483627928DEF19B00413A91 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				2483627E28DEF1FB00413A91 /* Launch */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		2483627A28DEF19F00413A91 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				2483628328DEF32300413A91 /* Launch */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		2483627B28DEF1E700413A91 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				2483627C28DEF1F600413A91 /* PastLaunch.swift */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		2483627E28DEF1FB00413A91 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				2483627F28DEF20D00413A91 /* PastLaunchMapper.swift */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		2483628328DEF32300413A91 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				2483628428DEF33100413A91 /* PastLaunchUseCase.swift */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
 		24AF097C28DE31A40030EDCF = {
 			isa = PBXGroup;
 			children = (
@@ -112,9 +195,10 @@
 			isa = PBXGroup;
 			children = (
 				2483626B28DEEDA100413A91 /* Data */,
+				2483627728DEF18900413A91 /* Domain */,
+				2483627328DEF11F00413A91 /* Modules */,
 				24AF099628DE31AE0030EDCF /* schema.json */,
 				24AF098828DE31A40030EDCF /* SpaceX_GraphQLApp.swift */,
-				24AF098A28DE31A40030EDCF /* LaunchesView.swift */,
 				24AF098C28DE31A50030EDCF /* Assets.xcassets */,
 				24AF098E28DE31A50030EDCF /* Preview Content */,
 				24605F7B28DE4E6200C79BCC /* Publisher+Additions.swift */,
@@ -236,7 +320,11 @@
 				246960D728DE41FC005D74D6 /* API.swift in Sources */,
 				246960DB28DE4281005D74D6 /* Network.swift in Sources */,
 				24605F7C28DE4E6200C79BCC /* Publisher+Additions.swift in Sources */,
+				2483627D28DEF1F600413A91 /* PastLaunch.swift in Sources */,
 				24AF098928DE31A40030EDCF /* SpaceX_GraphQLApp.swift in Sources */,
+				2483628528DEF33100413A91 /* PastLaunchUseCase.swift in Sources */,
+				2483628028DEF20D00413A91 /* PastLaunchMapper.swift in Sources */,
+				2483628228DEF2D500413A91 /* MappingError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
