@@ -9,14 +9,21 @@ import Foundation
 import Apollo
 import Combine
 
+// MARK: - Error
+
+enum NetworkError: Error {
+    case unknown
+}
+
+// MARK: - Network
+
 final class Network {
     
-    enum NetworkError: Error {
-        case unknown
-    }
+    // MARK: - Property
     
-    static let shared: Network = Network()
     private let apollo: ApolloClient = ApolloClient(url: URL(string: "https://api.spacex.land/graphql/")!)
+    
+    // MARK: - Method
     
     func fetch<Query: GraphQLQuery>(query: Query) -> AnyPublisher<Query.Data, Error> {
         let subject = PassthroughSubject<Query.Data, Error>()

@@ -11,12 +11,18 @@ import Combine
 typealias LaunchRepository = PastLaunchesRepository
 
 final class LaunchRepositoryImpl: LaunchRepository {
+    
+    // MARK: - Property
 
     private let network: Network
+    
+    // MARK: - Init
     
     init(network: Network) {
         self.network = network
     }
+    
+    // MARK: - PastLaunchesRepository
     
     func pastLaunches(limit: Int) -> AnyPublisher<PastLaunchesQuery.Data, Error> {
         network.fetch(query: PastLaunchesQuery(limit: limit))

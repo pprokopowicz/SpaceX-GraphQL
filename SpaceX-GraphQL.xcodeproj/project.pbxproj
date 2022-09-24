@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		243F8CCF28DF13A200916539 /* LaunchesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F8CCE28DF13A200916539 /* LaunchesViewModel.swift */; };
 		24605F7C28DE4E6200C79BCC /* Publisher+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24605F7B28DE4E6200C79BCC /* Publisher+Additions.swift */; };
 		246960D128DE40CC005D74D6 /* PastLaunches.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 246960D028DE40CC005D74D6 /* PastLaunches.graphql */; };
 		246960D528DE419A005D74D6 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 246960D428DE419A005D74D6 /* Apollo */; };
@@ -19,7 +20,7 @@
 		2483628228DEF2D500413A91 /* MappingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2483628128DEF2D500413A91 /* MappingError.swift */; };
 		2483628528DEF33100413A91 /* PastLaunchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2483628428DEF33100413A91 /* PastLaunchUseCase.swift */; };
 		2483628728DEF8FB00413A91 /* LaunchItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2483628628DEF8FB00413A91 /* LaunchItem.swift */; };
-		2483628928DEF92900413A91 /* LaunchesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2483628828DEF92900413A91 /* LaunchesViewModel.swift */; };
+		2483628928DEF92900413A91 /* LaunchesViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2483628828DEF92900413A91 /* LaunchesViewModelImpl.swift */; };
 		2483628C28DEFCDF00413A91 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 2483628B28DEFCDF00413A91 /* Swinject */; };
 		2483628F28DEFD2B00413A91 /* CoreAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2483628E28DEFD2B00413A91 /* CoreAssembly.swift */; };
 		2483629128DEFD8300413A91 /* RepositoryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2483629028DEFD8300413A91 /* RepositoryAssembly.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		243F8CCE28DF13A200916539 /* LaunchesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesViewModel.swift; sourceTree = "<group>"; };
 		24605F7B28DE4E6200C79BCC /* Publisher+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Additions.swift"; sourceTree = "<group>"; };
 		246960D028DE40CC005D74D6 /* PastLaunches.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = PastLaunches.graphql; sourceTree = "<group>"; };
 		246960D628DE41FC005D74D6 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -45,7 +47,7 @@
 		2483628128DEF2D500413A91 /* MappingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappingError.swift; sourceTree = "<group>"; };
 		2483628428DEF33100413A91 /* PastLaunchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastLaunchUseCase.swift; sourceTree = "<group>"; };
 		2483628628DEF8FB00413A91 /* LaunchItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchItem.swift; sourceTree = "<group>"; };
-		2483628828DEF92900413A91 /* LaunchesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesViewModel.swift; sourceTree = "<group>"; };
+		2483628828DEF92900413A91 /* LaunchesViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesViewModelImpl.swift; sourceTree = "<group>"; };
 		2483628E28DEFD2B00413A91 /* CoreAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAssembly.swift; sourceTree = "<group>"; };
 		2483629028DEFD8300413A91 /* RepositoryAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryAssembly.swift; sourceTree = "<group>"; };
 		2483629228DEFE6900413A91 /* MapperAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperAssembly.swift; sourceTree = "<group>"; };
@@ -72,6 +74,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		243F8CCC28DF12AE00916539 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				24605F7B28DE4E6200C79BCC /* Publisher+Additions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		243F8CCD28DF12B900916539 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2483628D28DEFCFB00413A91 /* Assembly */,
+				243F8CCC28DF12AE00916539 /* Extension */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		246960CF28DE408C005D74D6 /* GraphQL */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,7 +147,8 @@
 			isa = PBXGroup;
 			children = (
 				24AF098A28DE31A40030EDCF /* LaunchesView.swift */,
-				2483628828DEF92900413A91 /* LaunchesViewModel.swift */,
+				2483628828DEF92900413A91 /* LaunchesViewModelImpl.swift */,
+				243F8CCE28DF13A200916539 /* LaunchesViewModel.swift */,
 				2483628628DEF8FB00413A91 /* LaunchItem.swift */,
 			);
 			path = Launches;
@@ -224,7 +244,7 @@
 		24AF098728DE31A40030EDCF /* SpaceX-GraphQL */ = {
 			isa = PBXGroup;
 			children = (
-				2483628D28DEFCFB00413A91 /* Assembly */,
+				243F8CCD28DF12B900916539 /* Common */,
 				2483626B28DEEDA100413A91 /* Data */,
 				2483627728DEF18900413A91 /* Domain */,
 				2483627328DEF11F00413A91 /* Modules */,
@@ -232,7 +252,6 @@
 				24AF098828DE31A40030EDCF /* SpaceX_GraphQLApp.swift */,
 				24AF098C28DE31A50030EDCF /* Assets.xcassets */,
 				24AF098E28DE31A50030EDCF /* Preview Content */,
-				24605F7B28DE4E6200C79BCC /* Publisher+Additions.swift */,
 			);
 			path = "SpaceX-GraphQL";
 			sourceTree = "<group>";
@@ -349,7 +368,7 @@
 			files = (
 				2483626E28DEEE0900413A91 /* LaunchRepository.swift in Sources */,
 				24AF098B28DE31A40030EDCF /* LaunchesView.swift in Sources */,
-				2483628928DEF92900413A91 /* LaunchesViewModel.swift in Sources */,
+				2483628928DEF92900413A91 /* LaunchesViewModelImpl.swift in Sources */,
 				2483627228DEEE3700413A91 /* PastLaunchRepository.swift in Sources */,
 				2483629328DEFE6900413A91 /* MapperAssembly.swift in Sources */,
 				2483629128DEFD8300413A91 /* RepositoryAssembly.swift in Sources */,
@@ -358,6 +377,7 @@
 				2483629528DEFE9100413A91 /* UseCaseAssembly.swift in Sources */,
 				24605F7C28DE4E6200C79BCC /* Publisher+Additions.swift in Sources */,
 				2483627D28DEF1F600413A91 /* PastLaunch.swift in Sources */,
+				243F8CCF28DF13A200916539 /* LaunchesViewModel.swift in Sources */,
 				24AF098928DE31A40030EDCF /* SpaceX_GraphQLApp.swift in Sources */,
 				2483629728DEFECC00413A91 /* ViewModelAssembly.swift in Sources */,
 				2483628528DEF33100413A91 /* PastLaunchUseCase.swift in Sources */,
