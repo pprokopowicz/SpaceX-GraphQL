@@ -18,6 +18,8 @@
 		2483628028DEF20D00413A91 /* PastLaunchMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2483627F28DEF20D00413A91 /* PastLaunchMapper.swift */; };
 		2483628228DEF2D500413A91 /* MappingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2483628128DEF2D500413A91 /* MappingError.swift */; };
 		2483628528DEF33100413A91 /* PastLaunchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2483628428DEF33100413A91 /* PastLaunchUseCase.swift */; };
+		2483628728DEF8FB00413A91 /* LaunchItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2483628628DEF8FB00413A91 /* LaunchItem.swift */; };
+		2483628928DEF92900413A91 /* LaunchesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2483628828DEF92900413A91 /* LaunchesViewModel.swift */; };
 		24AF098928DE31A40030EDCF /* SpaceX_GraphQLApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AF098828DE31A40030EDCF /* SpaceX_GraphQLApp.swift */; };
 		24AF098B28DE31A40030EDCF /* LaunchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AF098A28DE31A40030EDCF /* LaunchesView.swift */; };
 		24AF098D28DE31A50030EDCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24AF098C28DE31A50030EDCF /* Assets.xcassets */; };
@@ -36,6 +38,8 @@
 		2483627F28DEF20D00413A91 /* PastLaunchMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastLaunchMapper.swift; sourceTree = "<group>"; };
 		2483628128DEF2D500413A91 /* MappingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappingError.swift; sourceTree = "<group>"; };
 		2483628428DEF33100413A91 /* PastLaunchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastLaunchUseCase.swift; sourceTree = "<group>"; };
+		2483628628DEF8FB00413A91 /* LaunchItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchItem.swift; sourceTree = "<group>"; };
+		2483628828DEF92900413A91 /* LaunchesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesViewModel.swift; sourceTree = "<group>"; };
 		24AF098528DE31A40030EDCF /* SpaceX-GraphQL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpaceX-GraphQL.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24AF098828DE31A40030EDCF /* SpaceX_GraphQLApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceX_GraphQLApp.swift; sourceTree = "<group>"; };
 		24AF098A28DE31A40030EDCF /* LaunchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesView.swift; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				24AF098A28DE31A40030EDCF /* LaunchesView.swift */,
+				2483628828DEF92900413A91 /* LaunchesViewModel.swift */,
+				2483628628DEF8FB00413A91 /* LaunchItem.swift */,
 			);
 			path = Launches;
 			sourceTree = "<group>";
@@ -316,6 +322,7 @@
 			files = (
 				2483626E28DEEE0900413A91 /* LaunchRepository.swift in Sources */,
 				24AF098B28DE31A40030EDCF /* LaunchesView.swift in Sources */,
+				2483628928DEF92900413A91 /* LaunchesViewModel.swift in Sources */,
 				2483627228DEEE3700413A91 /* PastLaunchRepository.swift in Sources */,
 				246960D728DE41FC005D74D6 /* API.swift in Sources */,
 				246960DB28DE4281005D74D6 /* Network.swift in Sources */,
@@ -323,6 +330,7 @@
 				2483627D28DEF1F600413A91 /* PastLaunch.swift in Sources */,
 				24AF098928DE31A40030EDCF /* SpaceX_GraphQLApp.swift in Sources */,
 				2483628528DEF33100413A91 /* PastLaunchUseCase.swift in Sources */,
+				2483628728DEF8FB00413A91 /* LaunchItem.swift in Sources */,
 				2483628028DEF20D00413A91 /* PastLaunchMapper.swift in Sources */,
 				2483628228DEF2D500413A91 /* MappingError.swift in Sources */,
 			);
