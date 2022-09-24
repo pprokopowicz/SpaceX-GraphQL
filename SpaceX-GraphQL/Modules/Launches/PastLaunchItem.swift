@@ -7,7 +7,12 @@
 
 import Foundation
 
-struct LaunchItem: Identifiable {
+struct PastLaunchesScreenItem {
+    let pastLaunches: [PastLaunchItem]
+    let hasMoreItems: Bool
+}
+
+struct PastLaunchItem: Identifiable {
     let id: String
     let missionName: String
 }

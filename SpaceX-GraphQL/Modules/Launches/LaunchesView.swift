@@ -28,9 +28,19 @@ struct LaunchesView<ViewModel: LaunchesViewModel>: View {
                 Text("Empty")
             case .loading:
                 ProgressView()
-            case .content(let items):
-                List(items) { launch in
-                    Text(launch.missionName)
+            case .content(let item):
+                List {
+                    ForEach(item.pastLaunches) { launch in
+                        Text(launch.missionName)
+                    }
+                    
+                    ProgressView()
+                        .centered()
+                        .onAppear {
+                            viewModel.handle(action: .nextPage)
+                        }
+                    
+                        .isRemoved(!item.hasMoreItems)
                 }
             }
         }

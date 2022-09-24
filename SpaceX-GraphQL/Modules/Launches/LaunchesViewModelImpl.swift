@@ -10,18 +10,28 @@ import Combine
 
 final class LaunchesViewModelImpl: LaunchesViewModel {
     
+    // MARK: - Constant
+    
+    private enum Constant {
+        static let limit: Int = 20
+    }
+    
     // MARK: - Property
     
-    @Published private(set) var viewState: ViewState<[LaunchItem]>
+    @Published private(set) var viewState: ViewState<PastLaunchesScreenItem>
+    
     private let pastLaunchesUseCase: PastLaunchUseCase
-    private var cancellables: Set<AnyCancellable>
+    private var launches: [PastLaunch]
+    private var currentOffset: Int
+    private var cancellable: AnyCancellable?
     
     // MARK: - Init
     
     init(pastLaunchesUseCase: PastLaunchUseCase) {
         self.pastLaunchesUseCase = pastLaunchesUseCase
         self.viewState = .empty
-        self.cancellables =  []
+        self.launches = []
+        self.currentOffset = 0
     }
     
     // MARK: - Action handling
@@ -29,25 +39,37 @@ final class LaunchesViewModelImpl: LaunchesViewModel {
     func handle(action: LaunchesAction) {
         switch action {
         case .viewIsReady:
-            fetchData()
+            fetchData(loading: true)
+        case .nextPage:
+            fetchData(loading: false)
         }
     }
     
-    private func fetchData() {
-        viewState = .loading
-        pastLaunchesUseCase.execute()
+    private func fetchData(loading: Bool) {
+        guard cancellable == nil else { return }
+        if loading {
+            viewState = .loading
+        }
+        
+        cancellable = pastLaunchesUseCase.execute(limit: Constant.limit, offset: currentOffset)
             .receive(on: RunLoop.main)
             .sink { [weak self] data in
-                self?.feedView(with: data)
+                guard let self else { return }
+                self.currentOffset += data.count
+                self.launches += data
+                self.feedView()
+                print(self.currentOffset)
             } onFailure: { error in
                 print(error.localizedDescription)
+            } onFinish: { [weak self] in
+                self?.cancellable = nil
             }
-            .store(in: &cancellables)
     }
     
-    private func feedView(with model: [PastLaunch]) {
-        let items = model.map { LaunchItem(id: $0.id, missionName: $0.missionName) }
-        viewState = .content(items)
+    private func feedView() {
+        let launchItems = launches.map { PastLaunchItem(id: $0.id, missionName: $0.missionName) }
+        let item = PastLaunchesScreenItem(pastLaunches: launchItems, hasMoreItems: currentOffset % Constant.limit == 0)
+        viewState = .content(item)
     }
     
 }

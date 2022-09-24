@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 protocol PastLaunchUseCase {
-    func execute() -> AnyPublisher<[PastLaunch], Error>
+    func execute(limit: Int, offset: Int) -> AnyPublisher<[PastLaunch], Error>
 }
 
 struct PastLaunchesUseCaseImpl: PastLaunchUseCase {
@@ -25,8 +25,8 @@ struct PastLaunchesUseCaseImpl: PastLaunchUseCase {
         self.repository = repository
     }
     
-    func execute() -> AnyPublisher<[PastLaunch], Error> {
-        repository.pastLaunches(limit: 20)
+    func execute(limit: Int, offset: Int) -> AnyPublisher<[PastLaunch], Error> {
+        repository.pastLaunches(limit: limit, offset: offset)
             .tryMap { response in
                 let model = (response.launchesPast ?? []).compactMap { $0 }
                 return try model.map(mapper.map(_:))

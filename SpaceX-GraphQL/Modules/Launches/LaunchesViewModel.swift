@@ -10,7 +10,7 @@ import Foundation
 // MARK: - Protocol
 
 protocol LaunchesViewModel: ObservableObject {
-    var viewState: ViewState<[LaunchItem]> { get }
+    var viewState: ViewState<PastLaunchesScreenItem> { get }
     func handle(action: LaunchesAction)
 }
 
@@ -18,4 +18,5 @@ protocol LaunchesViewModel: ObservableObject {
 
 enum LaunchesAction {
     case viewIsReady
+    case nextPage
 }

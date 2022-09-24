@@ -10,6 +10,8 @@
 		243F8CCF28DF13A200916539 /* LaunchesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F8CCE28DF13A200916539 /* LaunchesViewModel.swift */; };
 		243F8CD128DF13DD00916539 /* NetworkImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F8CD028DF13DD00916539 /* NetworkImpl.swift */; };
 		243F8CD328DF274900916539 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F8CD228DF274900916539 /* ViewState.swift */; };
+		243F8CD628DF3CB500916539 /* CenterViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F8CD528DF3CB500916539 /* CenterViewModifier.swift */; };
+		243F8CD828DF409C00916539 /* IsRemovedViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F8CD728DF409C00916539 /* IsRemovedViewModifier.swift */; };
 		24605F7C28DE4E6200C79BCC /* Publisher+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24605F7B28DE4E6200C79BCC /* Publisher+Additions.swift */; };
 		246960D128DE40CC005D74D6 /* PastLaunches.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 246960D028DE40CC005D74D6 /* PastLaunches.graphql */; };
 		246960D528DE419A005D74D6 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 246960D428DE419A005D74D6 /* Apollo */; };
@@ -21,7 +23,7 @@
 		2483628028DEF20D00413A91 /* PastLaunchMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2483627F28DEF20D00413A91 /* PastLaunchMapper.swift */; };
 		2483628228DEF2D500413A91 /* MappingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2483628128DEF2D500413A91 /* MappingError.swift */; };
 		2483628528DEF33100413A91 /* PastLaunchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2483628428DEF33100413A91 /* PastLaunchUseCase.swift */; };
-		2483628728DEF8FB00413A91 /* LaunchItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2483628628DEF8FB00413A91 /* LaunchItem.swift */; };
+		2483628728DEF8FB00413A91 /* PastLaunchItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2483628628DEF8FB00413A91 /* PastLaunchItem.swift */; };
 		2483628928DEF92900413A91 /* LaunchesViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2483628828DEF92900413A91 /* LaunchesViewModelImpl.swift */; };
 		2483628C28DEFCDF00413A91 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 2483628B28DEFCDF00413A91 /* Swinject */; };
 		2483628F28DEFD2B00413A91 /* CoreAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2483628E28DEFD2B00413A91 /* CoreAssembly.swift */; };
@@ -40,6 +42,8 @@
 		243F8CCE28DF13A200916539 /* LaunchesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesViewModel.swift; sourceTree = "<group>"; };
 		243F8CD028DF13DD00916539 /* NetworkImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImpl.swift; sourceTree = "<group>"; };
 		243F8CD228DF274900916539 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
+		243F8CD528DF3CB500916539 /* CenterViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterViewModifier.swift; sourceTree = "<group>"; };
+		243F8CD728DF409C00916539 /* IsRemovedViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsRemovedViewModifier.swift; sourceTree = "<group>"; };
 		24605F7B28DE4E6200C79BCC /* Publisher+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Additions.swift"; sourceTree = "<group>"; };
 		246960D028DE40CC005D74D6 /* PastLaunches.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = PastLaunches.graphql; sourceTree = "<group>"; };
 		246960D628DE41FC005D74D6 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -50,7 +54,7 @@
 		2483627F28DEF20D00413A91 /* PastLaunchMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastLaunchMapper.swift; sourceTree = "<group>"; };
 		2483628128DEF2D500413A91 /* MappingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappingError.swift; sourceTree = "<group>"; };
 		2483628428DEF33100413A91 /* PastLaunchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastLaunchUseCase.swift; sourceTree = "<group>"; };
-		2483628628DEF8FB00413A91 /* LaunchItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchItem.swift; sourceTree = "<group>"; };
+		2483628628DEF8FB00413A91 /* PastLaunchItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastLaunchItem.swift; sourceTree = "<group>"; };
 		2483628828DEF92900413A91 /* LaunchesViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesViewModelImpl.swift; sourceTree = "<group>"; };
 		2483628E28DEFD2B00413A91 /* CoreAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAssembly.swift; sourceTree = "<group>"; };
 		2483629028DEFD8300413A91 /* RepositoryAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryAssembly.swift; sourceTree = "<group>"; };
@@ -91,9 +95,19 @@
 			children = (
 				2483628D28DEFCFB00413A91 /* Assembly */,
 				243F8CCC28DF12AE00916539 /* Extension */,
+				243F8CD428DF3CAB00916539 /* ViewModifier */,
 				243F8CD228DF274900916539 /* ViewState.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		243F8CD428DF3CAB00916539 /* ViewModifier */ = {
+			isa = PBXGroup;
+			children = (
+				243F8CD528DF3CB500916539 /* CenterViewModifier.swift */,
+				243F8CD728DF409C00916539 /* IsRemovedViewModifier.swift */,
+			);
+			path = ViewModifier;
 			sourceTree = "<group>";
 		};
 		246960CF28DE408C005D74D6 /* GraphQL */ = {
@@ -155,7 +169,7 @@
 				24AF098A28DE31A40030EDCF /* LaunchesView.swift */,
 				243F8CCE28DF13A200916539 /* LaunchesViewModel.swift */,
 				2483628828DEF92900413A91 /* LaunchesViewModelImpl.swift */,
-				2483628628DEF8FB00413A91 /* LaunchItem.swift */,
+				2483628628DEF8FB00413A91 /* PastLaunchItem.swift */,
 			);
 			path = Launches;
 			sourceTree = "<group>";
@@ -377,10 +391,12 @@
 				2483628928DEF92900413A91 /* LaunchesViewModelImpl.swift in Sources */,
 				2483627228DEEE3700413A91 /* PastLaunchRepository.swift in Sources */,
 				2483629328DEFE6900413A91 /* MapperAssembly.swift in Sources */,
+				243F8CD828DF409C00916539 /* IsRemovedViewModifier.swift in Sources */,
 				2483629128DEFD8300413A91 /* RepositoryAssembly.swift in Sources */,
 				246960D728DE41FC005D74D6 /* API.swift in Sources */,
 				246960DB28DE4281005D74D6 /* Network.swift in Sources */,
 				243F8CD328DF274900916539 /* ViewState.swift in Sources */,
+				243F8CD628DF3CB500916539 /* CenterViewModifier.swift in Sources */,
 				2483629528DEFE9100413A91 /* UseCaseAssembly.swift in Sources */,
 				24605F7C28DE4E6200C79BCC /* Publisher+Additions.swift in Sources */,
 				2483627D28DEF1F600413A91 /* PastLaunch.swift in Sources */,
@@ -389,7 +405,7 @@
 				24AF098928DE31A40030EDCF /* SpaceX_GraphQLApp.swift in Sources */,
 				2483629728DEFECC00413A91 /* ViewModelAssembly.swift in Sources */,
 				2483628528DEF33100413A91 /* PastLaunchUseCase.swift in Sources */,
-				2483628728DEF8FB00413A91 /* LaunchItem.swift in Sources */,
+				2483628728DEF8FB00413A91 /* PastLaunchItem.swift in Sources */,
 				2483628028DEF20D00413A91 /* PastLaunchMapper.swift in Sources */,
 				2483628F28DEFD2B00413A91 /* CoreAssembly.swift in Sources */,
 				2483628228DEF2D500413A91 /* MappingError.swift in Sources */,

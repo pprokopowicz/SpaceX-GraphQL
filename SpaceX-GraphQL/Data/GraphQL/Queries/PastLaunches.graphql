@@ -1,5 +1,5 @@
-query PastLaunches($limit: Int!) {
-  launchesPast(limit: $limit) {
+query PastLaunches($limit: Int!, $offset: Int!) {
+  launchesPast(limit: $limit, offset: $offset) {
     id
     details
     mission_name

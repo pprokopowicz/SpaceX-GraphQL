@@ -9,5 +9,5 @@ import Foundation
 import Combine
 
 protocol PastLaunchesRepository {
-    func pastLaunches(limit: Int) -> AnyPublisher<PastLaunchesQuery.Data, Error>
+    func pastLaunches(limit: Int, offset: Int) -> AnyPublisher<PastLaunchesQuery.Data, Error>
 }
