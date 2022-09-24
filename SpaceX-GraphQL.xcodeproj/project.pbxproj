@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24605F7C28DE4E6200C79BCC /* Publisher+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24605F7B28DE4E6200C79BCC /* Publisher+Additions.swift */; };
 		246960D128DE40CC005D74D6 /* PastLaunchesQuery.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 246960D028DE40CC005D74D6 /* PastLaunchesQuery.graphql */; };
 		246960D528DE419A005D74D6 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 246960D428DE419A005D74D6 /* Apollo */; };
 		246960D728DE41FC005D74D6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246960D628DE41FC005D74D6 /* API.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24605F7B28DE4E6200C79BCC /* Publisher+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Additions.swift"; sourceTree = "<group>"; };
 		246960D028DE40CC005D74D6 /* PastLaunchesQuery.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = PastLaunchesQuery.graphql; sourceTree = "<group>"; };
 		246960D628DE41FC005D74D6 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		246960DA28DE4281005D74D6 /* Apollo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apollo.swift; sourceTree = "<group>"; };
@@ -46,8 +48,8 @@
 			isa = PBXGroup;
 			children = (
 				246960D628DE41FC005D74D6 /* API.swift */,
-				246960D028DE40CC005D74D6 /* PastLaunchesQuery.graphql */,
 				246960DA28DE4281005D74D6 /* Apollo.swift */,
+				246960D028DE40CC005D74D6 /* PastLaunchesQuery.graphql */,
 			);
 			path = GraphQL;
 			sourceTree = "<group>";
@@ -77,6 +79,7 @@
 				24AF098A28DE31A40030EDCF /* ContentView.swift */,
 				24AF098C28DE31A50030EDCF /* Assets.xcassets */,
 				24AF098E28DE31A50030EDCF /* Preview Content */,
+				24605F7B28DE4E6200C79BCC /* Publisher+Additions.swift */,
 			);
 			path = "SpaceX-GraphQL";
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				24AF098B28DE31A40030EDCF /* ContentView.swift in Sources */,
 				246960D728DE41FC005D74D6 /* API.swift in Sources */,
 				246960DB28DE4281005D74D6 /* Apollo.swift in Sources */,
+				24605F7C28DE4E6200C79BCC /* Publisher+Additions.swift in Sources */,
 				24AF098928DE31A40030EDCF /* SpaceX_GraphQLApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

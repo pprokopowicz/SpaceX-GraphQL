@@ -6,25 +6,25 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ContentView: View {
     
     @State var pastLaunches: [PastLaunchesQueryQuery.Data.LaunchesPast] = []
+    @State var cancellable: AnyCancellable?
     
     var body: some View {
         List(pastLaunches, id: \.id) { launch in
             Text(launch.missionName ?? "Missing name")
         }
         .onAppear {
-            Network.shared.apollo.fetch(query: PastLaunchesQueryQuery(limit: 20)) { result in
-                switch result {
-                case .success(let response):
-                    guard let data = response.data else { return }
+            cancellable = Network.shared.fetch(query: PastLaunchesQueryQuery(limit: 20))
+                .receive(on: RunLoop.main)
+                .sink { data in
                     pastLaunches = data.launchesPast?.compactMap { $0 } ?? []
-                case .failure(let error):
+                } onFailure: { error in
                     print(error.localizedDescription)
                 }
-            }
         }
     }
 }
