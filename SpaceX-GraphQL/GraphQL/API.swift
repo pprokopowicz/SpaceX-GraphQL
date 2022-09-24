@@ -8,8 +8,8 @@ public final class PastLaunchesQueryQuery: GraphQLQuery {
   /// The raw GraphQL definition of this operation.
   public let operationDefinition: String =
     """
-    query PastLaunchesQuery {
-      launchesPast(limit: 10) {
+    query PastLaunchesQuery($limit: Int!) {
+      launchesPast(limit: $limit) {
         __typename
         mission_name
         launch_date_local
@@ -30,7 +30,14 @@ public final class PastLaunchesQueryQuery: GraphQLQuery {
 
   public let operationName: String = "PastLaunchesQuery"
 
-  public init() {
+  public var limit: Int
+
+  public init(limit: Int) {
+    self.limit = limit
+  }
+
+  public var variables: GraphQLMap? {
+    return ["limit": limit]
   }
 
   public struct Data: GraphQLSelectionSet {
@@ -38,7 +45,7 @@ public final class PastLaunchesQueryQuery: GraphQLQuery {
 
     public static var selections: [GraphQLSelection] {
       return [
-        GraphQLField("launchesPast", arguments: ["limit": 10], type: .list(.object(LaunchesPast.selections))),
+        GraphQLField("launchesPast", arguments: ["limit": GraphQLVariable("limit")], type: .list(.object(LaunchesPast.selections))),
       ]
     }
 

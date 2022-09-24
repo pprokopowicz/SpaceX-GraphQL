@@ -16,7 +16,7 @@ struct ContentView: View {
             Text(launch.missionName ?? "Missing name")
         }
         .onAppear {
-            Network.shared.apollo.fetch(query: PastLaunchesQueryQuery()) { result in
+            Network.shared.apollo.fetch(query: PastLaunchesQueryQuery(limit: 20)) { result in
                 switch result {
                 case .success(let response):
                     guard let data = response.data else { return }
