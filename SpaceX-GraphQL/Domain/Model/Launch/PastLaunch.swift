@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PastLaunch {
+struct PastLaunch: Equatable {
     let id: String
     let missionName: String
 }

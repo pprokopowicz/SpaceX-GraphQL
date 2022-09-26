@@ -9,6 +9,20 @@ import SwiftUI
 
 struct LaunchesView<ViewModel: LaunchesViewModel>: View {
     
+    @State private var viewModel: ViewModel
+    
+    init(viewModel: ViewModel) {
+        self.viewModel = viewModel
+    }
+    
+    var body: some View {
+        LaunchesViewImpl(viewModel: viewModel)
+    }
+}
+
+
+fileprivate struct LaunchesViewImpl<ViewModel: LaunchesViewModel>: View {
+    
     // MARK: - Property
     
     @ObservedObject private var viewModel: ViewModel
@@ -31,7 +45,9 @@ struct LaunchesView<ViewModel: LaunchesViewModel>: View {
             case .content(let item):
                 List {
                     ForEach(item.pastLaunches) { launch in
-                        Text(launch.missionName)
+                        Button(launch.missionName) {
+                            viewModel.handle(action: .launch(launch))
+                        }
                     }
                     
                     ProgressView()
@@ -44,8 +60,9 @@ struct LaunchesView<ViewModel: LaunchesViewModel>: View {
                 }
             }
         }
+        .handleNavigation(viewModel)
         .onAppear {
-            viewModel.handle(action: .viewIsReady)
+            viewModel.handle(action: .viewDidAppear)
         }
         .navigationTitle("SpaceX")
     }

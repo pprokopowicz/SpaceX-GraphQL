@@ -16,19 +16,30 @@ final class LaunchesViewModelImpl: LaunchesViewModel {
         static let limit: Int = 20
     }
     
+    // MARK: - NavigationProvider
+    
+    var navigationPublisher: AnyPublisher<NavigationDirection, Never> { navigationSubject.eraseToAnyPublisher() }
+    var navigationSubject: PassthroughSubject<NavigationDirection, Never> = PassthroughSubject<NavigationDirection, Never>()
+    
     // MARK: - Property
     
     @Published private(set) var viewState: ViewState<PastLaunchesScreenItem>
     
-    private let pastLaunchesUseCase: PastLaunchUseCase
+    private var didViewAppear: Bool
     private var launches: [PastLaunch]
     private var currentOffset: Int
     private var cancellable: AnyCancellable?
+    
+    // MARK: - Dependency
+    
+    private let pastLaunchesUseCase: PastLaunchUseCase
     
     // MARK: - Init
     
     init(pastLaunchesUseCase: PastLaunchUseCase) {
         self.pastLaunchesUseCase = pastLaunchesUseCase
+        
+        self.didViewAppear = false
         self.viewState = .empty
         self.launches = []
         self.currentOffset = 0
@@ -38,10 +49,14 @@ final class LaunchesViewModelImpl: LaunchesViewModel {
     
     func handle(action: LaunchesAction) {
         switch action {
-        case .viewIsReady:
+        case .viewDidAppear:
+            guard !didViewAppear else { return }
+            didViewAppear = true
             fetchData(loading: true)
         case .nextPage:
             fetchData(loading: false)
+        case .launch(let launch):
+            navigationSubject.sendPush(.launchDetails(id: launch.id))
         }
     }
     

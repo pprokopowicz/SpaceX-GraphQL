@@ -12,3 +12,5 @@ enum ViewState<Item> {
     case loading
     case content(Item)
 }
+
+extension ViewState: Equatable where Item: Equatable {}

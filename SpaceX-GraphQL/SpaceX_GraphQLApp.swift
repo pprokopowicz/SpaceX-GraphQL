@@ -11,6 +11,8 @@ import Swinject
 @main
 struct SpaceX_GraphQLApp: App {
     
+    @StateObject private var navigationCoordinator: NavigationCoordinatorImpl = NavigationCoordinatorImpl()
+    private let viewFactory: some ViewFactory = ViewFactoryImpl()
     private let assembler: Assembler = Assembler([
         CoreAssembly(),
         RepositoryAssembly(),
@@ -21,8 +23,12 @@ struct SpaceX_GraphQLApp: App {
     
     var body: some Scene {
         WindowGroup {
-            NavigationStack {
+            NavigationStack(path: $navigationCoordinator.path) {
                 LaunchesView(viewModel: assembler.resolver.resolve(LaunchesViewModelImpl.self)!)
+                    .environmentObject(navigationCoordinator)
+                    .navigationDestination(for: Route.self) { route in
+                        viewFactory.view(for: route)
+                    }
             }
         }
     }

@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - Protocol
 
-protocol LaunchesViewModel: ObservableObject {
+protocol LaunchesViewModel: ObservableObject & NavigationProvider {
     var viewState: ViewState<PastLaunchesScreenItem> { get }
     func handle(action: LaunchesAction)
 }
@@ -17,6 +17,7 @@ protocol LaunchesViewModel: ObservableObject {
 // MARK: - Action
 
 enum LaunchesAction {
-    case viewIsReady
+    case viewDidAppear
     case nextPage
+    case launch(PastLaunchItem)
 }
