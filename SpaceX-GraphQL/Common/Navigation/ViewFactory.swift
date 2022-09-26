@@ -10,8 +10,8 @@ import SwiftUI
 import Swinject
 
 protocol ViewFactory {
-    associatedtype V: View
-    func view(for route: Route) -> V
+    associatedtype CreatedView: View
+    func view(for route: Route) -> CreatedView
 }
 
 final class ViewFactoryImpl: ViewFactory {
@@ -22,6 +22,7 @@ final class ViewFactoryImpl: ViewFactory {
         self.resolver = resolver
     }
     
+    // swiftlint:disable force_unwrapping
     @ViewBuilder
     func view(for route: Route) -> some View {
         switch route {
@@ -29,4 +30,5 @@ final class ViewFactoryImpl: ViewFactory {
             resolver.resolve(LaunchDetailsView<LaunchDetailsViewModelImpl>.self, argument: id)!
         }
     }
+    // swiftlint:enable force_unwrapping
 }

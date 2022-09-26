@@ -20,7 +20,7 @@ struct LaunchDetailsView<ViewModel: LaunchDetailsViewModel>: View {
     }
 }
 
-struct LaunchDetailsBodyView<ViewModel: LaunchDetailsViewModel>: View {
+private struct LaunchDetailsBodyView<ViewModel: LaunchDetailsViewModel>: View {
     
     // MARK: - Property
     

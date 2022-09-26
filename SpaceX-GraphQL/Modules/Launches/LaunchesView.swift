@@ -20,8 +20,7 @@ struct LaunchesView<ViewModel: LaunchesViewModel>: View {
     }
 }
 
-
-fileprivate struct LaunchesBodyView<ViewModel: LaunchesViewModel>: View {
+private struct LaunchesBodyView<ViewModel: LaunchesViewModel>: View {
     
     // MARK: - Property
     

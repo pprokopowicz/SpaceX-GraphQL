@@ -9,10 +9,12 @@ import SwiftUI
 import Swinject
 
 @main
-struct SpaceX_GraphQLApp: App {
+struct SpaceXGraphQLApp: App {
     
-    @ObservedObject private var navigationCoordinator: NavigationCoordinatorImpl = SpaceX_GraphQLApp.assembler.resolver.resolve(NavigationCoordinatorImpl.self)!
-    private let viewFactory: some ViewFactory = SpaceX_GraphQLApp.assembler.resolver.resolve(ViewFactoryImpl.self)!
+    // swiftlint:disable force_unwrapping
+    @ObservedObject private var navigationCoordinator: NavigationCoordinatorImpl = Self.assembler.resolver.resolve(NavigationCoordinatorImpl.self)!
+    private let viewFactory: some ViewFactory = Self.assembler.resolver.resolve(ViewFactoryImpl.self)!
+    // swiftlint:enable force_unwrapping
     private static let assembler: Assembler = Assembler([
         CoreAssembly(),
         RepositoryAssembly(),
@@ -25,7 +27,7 @@ struct SpaceX_GraphQLApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationStack(path: $navigationCoordinator.path) {
-                SpaceX_GraphQLApp.assembler.resolver.resolve(LaunchesView<LaunchesViewModelImpl>.self)
+                Self.assembler.resolver.resolve(LaunchesView<LaunchesViewModelImpl>.self)
                     .environmentObject(navigationCoordinator)
                     .navigationDestination(for: Route.self) { route in
                         viewFactory.view(for: route)

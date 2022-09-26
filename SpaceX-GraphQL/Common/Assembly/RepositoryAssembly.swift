@@ -8,6 +8,8 @@
 import Foundation
 import Swinject
 
+// swiftlint:disable force_unwrapping
+
 struct RepositoryAssembly: Assembly {
     func assemble(container: Swinject.Container) {
         container.register(LaunchRepository.self) { (resolver: Swinject.Resolver) in
@@ -15,3 +17,5 @@ struct RepositoryAssembly: Assembly {
         }
     }
 }
+
+// swiftlint:enable force_unwrapping

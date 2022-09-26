@@ -8,6 +8,8 @@
 import Foundation
 import Swinject
 
+// swiftlint:disable force_unwrapping
+
 struct MapperAssembly: Assembly {
     func assemble(container: Swinject.Container) {
         container.register(PastLaunchMapper.self) { _ in
@@ -30,3 +32,5 @@ struct MapperAssembly: Assembly {
         }
     }
 }
+
+// swiftlint:enable force_unwrapping

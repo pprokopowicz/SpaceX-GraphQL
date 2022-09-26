@@ -9,6 +9,8 @@ import Foundation
 import Swinject
 import Apollo
 
+// swiftlint:disable force_unwrapping
+
 struct CoreAssembly: Assembly {
     
     func assemble(container: Swinject.Container) {
@@ -30,3 +32,5 @@ struct CoreAssembly: Assembly {
     }
     
 }
+
+// swiftlint:enable force_unwrapping
