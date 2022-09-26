@@ -58,7 +58,6 @@ final class LaunchesViewModelImpl: LaunchesViewModel {
                 self.currentOffset += data.count
                 self.launches += data
                 self.feedView()
-                print(self.currentOffset)
             } onFailure: { error in
                 print(error.localizedDescription)
             } onFinish: { [weak self] in

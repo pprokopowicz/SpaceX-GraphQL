@@ -1,15 +1,6 @@
 query PastLaunches($limit: Int!, $offset: Int!) {
   launchesPast(limit: $limit, offset: $offset) {
     id
-    details
     mission_name
-    launch_date_local
-    launch_site {
-      site_name_long
-      site_id
-    }
-    rocket {
-      rocket_name
-    }
   }
 }

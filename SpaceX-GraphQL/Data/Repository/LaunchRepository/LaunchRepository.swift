@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-typealias LaunchRepository = PastLaunchesRepository
+typealias LaunchRepository = PastLaunchesRepository & LaunchDetailsRepository
 
 final class LaunchRepositoryImpl: LaunchRepository {
     
@@ -26,5 +26,11 @@ final class LaunchRepositoryImpl: LaunchRepository {
     
     func pastLaunches(limit: Int, offset: Int) -> AnyPublisher<PastLaunchesQuery.Data, Error> {
         network.fetch(query: PastLaunchesQuery(limit: limit, offset: offset))
+    }
+    
+    // MARK: - LaunchDetailsRepository
+    
+    func launchDetails(id: String) -> AnyPublisher<LaunchDetailsQuery.Data, Error> {
+        network.fetch(query: LaunchDetailsQuery(id: id))
     }
 }

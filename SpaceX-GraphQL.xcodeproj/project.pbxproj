@@ -12,6 +12,8 @@
 		243F8CD328DF274900916539 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F8CD228DF274900916539 /* ViewState.swift */; };
 		243F8CD628DF3CB500916539 /* CenterViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F8CD528DF3CB500916539 /* CenterViewModifier.swift */; };
 		243F8CD828DF409C00916539 /* IsRemovedViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F8CD728DF409C00916539 /* IsRemovedViewModifier.swift */; };
+		244F6AB628E19CDC000F5EF7 /* LaunchDetails.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 244F6AB528E19CDC000F5EF7 /* LaunchDetails.graphql */; };
+		244F6AB828E19E4E000F5EF7 /* LaunchDetailsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F6AB728E19E4E000F5EF7 /* LaunchDetailsRepository.swift */; };
 		24605F7C28DE4E6200C79BCC /* Publisher+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24605F7B28DE4E6200C79BCC /* Publisher+Additions.swift */; };
 		246960D128DE40CC005D74D6 /* PastLaunches.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 246960D028DE40CC005D74D6 /* PastLaunches.graphql */; };
 		246960D528DE419A005D74D6 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 246960D428DE419A005D74D6 /* Apollo */; };
@@ -44,6 +46,8 @@
 		243F8CD228DF274900916539 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 		243F8CD528DF3CB500916539 /* CenterViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterViewModifier.swift; sourceTree = "<group>"; };
 		243F8CD728DF409C00916539 /* IsRemovedViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsRemovedViewModifier.swift; sourceTree = "<group>"; };
+		244F6AB528E19CDC000F5EF7 /* LaunchDetails.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = LaunchDetails.graphql; sourceTree = "<group>"; };
+		244F6AB728E19E4E000F5EF7 /* LaunchDetailsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailsRepository.swift; sourceTree = "<group>"; };
 		24605F7B28DE4E6200C79BCC /* Publisher+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Additions.swift"; sourceTree = "<group>"; };
 		246960D028DE40CC005D74D6 /* PastLaunches.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = PastLaunches.graphql; sourceTree = "<group>"; };
 		246960D628DE41FC005D74D6 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -134,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				246960D028DE40CC005D74D6 /* PastLaunches.graphql */,
+				244F6AB528E19CDC000F5EF7 /* LaunchDetails.graphql */,
 			);
 			path = Queries;
 			sourceTree = "<group>";
@@ -151,6 +156,7 @@
 			children = (
 				2483626D28DEEE0900413A91 /* LaunchRepository.swift */,
 				2483627128DEEE3700413A91 /* PastLaunchRepository.swift */,
+				244F6AB728E19E4E000F5EF7 /* LaunchDetailsRepository.swift */,
 			);
 			path = LaunchRepository;
 			sourceTree = "<group>";
@@ -354,6 +360,7 @@
 				24AF099028DE31A50030EDCF /* Preview Assets.xcassets in Resources */,
 				246960D128DE40CC005D74D6 /* PastLaunches.graphql in Resources */,
 				24AF099728DE31AE0030EDCF /* schema.json in Resources */,
+				244F6AB628E19CDC000F5EF7 /* LaunchDetails.graphql in Resources */,
 				24AF098D28DE31A50030EDCF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,6 +402,7 @@
 				2483629128DEFD8300413A91 /* RepositoryAssembly.swift in Sources */,
 				246960D728DE41FC005D74D6 /* API.swift in Sources */,
 				246960DB28DE4281005D74D6 /* Network.swift in Sources */,
+				244F6AB828E19E4E000F5EF7 /* LaunchDetailsRepository.swift in Sources */,
 				243F8CD328DF274900916539 /* ViewState.swift in Sources */,
 				243F8CD628DF3CB500916539 /* CenterViewModifier.swift in Sources */,
 				2483629528DEFE9100413A91 /* UseCaseAssembly.swift in Sources */,
