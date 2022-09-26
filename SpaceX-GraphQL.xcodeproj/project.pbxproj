@@ -47,6 +47,9 @@
 		24A4C71F28E1DA1300E210B7 /* PassthroughSubject+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A4C71E28E1DA1300E210B7 /* PassthroughSubject+Additions.swift */; };
 		24A4C72128E1DC5A00E210B7 /* ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A4C72028E1DC5A00E210B7 /* ViewFactory.swift */; };
 		24A4C72328E1F23100E210B7 /* NavigationProviderViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A4C72228E1F23100E210B7 /* NavigationProviderViewModifier.swift */; };
+		24A4C72728E1F3D100E210B7 /* LaunchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A4C72628E1F3D100E210B7 /* LaunchDetailsView.swift */; };
+		24A4C72928E1F3DE00E210B7 /* LaunchDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A4C72828E1F3DE00E210B7 /* LaunchDetailsViewModel.swift */; };
+		24A4C72B28E1F40200E210B7 /* LaunchDetailsViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A4C72A28E1F40200E210B7 /* LaunchDetailsViewModelImpl.swift */; };
 		24AF098928DE31A40030EDCF /* SpaceX_GraphQLApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AF098828DE31A40030EDCF /* SpaceX_GraphQLApp.swift */; };
 		24AF098B28DE31A40030EDCF /* LaunchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AF098A28DE31A40030EDCF /* LaunchesView.swift */; };
 		24AF098D28DE31A50030EDCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24AF098C28DE31A50030EDCF /* Assets.xcassets */; };
@@ -93,6 +96,9 @@
 		24A4C71E28E1DA1300E210B7 /* PassthroughSubject+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PassthroughSubject+Additions.swift"; sourceTree = "<group>"; };
 		24A4C72028E1DC5A00E210B7 /* ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFactory.swift; sourceTree = "<group>"; };
 		24A4C72228E1F23100E210B7 /* NavigationProviderViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationProviderViewModifier.swift; sourceTree = "<group>"; };
+		24A4C72628E1F3D100E210B7 /* LaunchDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailsView.swift; sourceTree = "<group>"; };
+		24A4C72828E1F3DE00E210B7 /* LaunchDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailsViewModel.swift; sourceTree = "<group>"; };
+		24A4C72A28E1F40200E210B7 /* LaunchDetailsViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailsViewModelImpl.swift; sourceTree = "<group>"; };
 		24AF098528DE31A40030EDCF /* SpaceX-GraphQL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpaceX-GraphQL.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24AF098828DE31A40030EDCF /* SpaceX_GraphQLApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceX_GraphQLApp.swift; sourceTree = "<group>"; };
 		24AF098A28DE31A40030EDCF /* LaunchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesView.swift; sourceTree = "<group>"; };
@@ -239,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				2483627428DEF12900413A91 /* Launches */,
+				24A4C72528E1F3C000E210B7 /* LaunchDetails */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -340,6 +347,16 @@
 				24AF099628DE31AE0030EDCF /* schema.json */,
 			);
 			path = Asset;
+			sourceTree = "<group>";
+		};
+		24A4C72528E1F3C000E210B7 /* LaunchDetails */ = {
+			isa = PBXGroup;
+			children = (
+				24A4C72628E1F3D100E210B7 /* LaunchDetailsView.swift */,
+				24A4C72828E1F3DE00E210B7 /* LaunchDetailsViewModel.swift */,
+				24A4C72A28E1F40200E210B7 /* LaunchDetailsViewModelImpl.swift */,
+			);
+			path = LaunchDetails;
 			sourceTree = "<group>";
 		};
 		24AF097C28DE31A40030EDCF = {
@@ -492,11 +509,13 @@
 				244F6AC028E1A087000F5EF7 /* Media.swift in Sources */,
 				2483629328DEFE6900413A91 /* MapperAssembly.swift in Sources */,
 				244F6ACC28E1B2A1000F5EF7 /* ResponseError.swift in Sources */,
+				24A4C72728E1F3D100E210B7 /* LaunchDetailsView.swift in Sources */,
 				243F8CD828DF409C00916539 /* IsRemovedViewModifier.swift in Sources */,
 				2483629128DEFD8300413A91 /* RepositoryAssembly.swift in Sources */,
 				246960D728DE41FC005D74D6 /* API.swift in Sources */,
 				246960DB28DE4281005D74D6 /* Network.swift in Sources */,
 				244F6AD128E1B867000F5EF7 /* NavigationCoordinator.swift in Sources */,
+				24A4C72B28E1F40200E210B7 /* LaunchDetailsViewModelImpl.swift in Sources */,
 				244F6AB828E19E4E000F5EF7 /* LaunchDetailsRepository.swift in Sources */,
 				243F8CD328DF274900916539 /* ViewState.swift in Sources */,
 				24A4C71F28E1DA1300E210B7 /* PassthroughSubject+Additions.swift in Sources */,
@@ -511,6 +530,7 @@
 				244F6ABA28E19FB2000F5EF7 /* LaunchDetails.swift in Sources */,
 				24AF098928DE31A40030EDCF /* SpaceX_GraphQLApp.swift in Sources */,
 				2483629728DEFECC00413A91 /* ViewModelAssembly.swift in Sources */,
+				24A4C72928E1F3DE00E210B7 /* LaunchDetailsViewModel.swift in Sources */,
 				244F6ACE28E1B6A1000F5EF7 /* Route.swift in Sources */,
 				244F6ACA28E1B20D000F5EF7 /* LaunchDetailsUseCase.swift in Sources */,
 				2483628528DEF33100413A91 /* PastLaunchUseCase.swift in Sources */,
