@@ -10,5 +10,4 @@ import Foundation
 struct Media {
     let images: [URL]?
     let video: URL?
-    let redditMedia: URL?
 }

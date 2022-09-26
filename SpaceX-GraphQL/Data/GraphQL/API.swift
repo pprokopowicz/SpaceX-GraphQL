@@ -27,7 +27,6 @@ public final class LaunchDetailsQuery: GraphQLQuery {
           __typename
           flickr_images
           video_link
-          reddit_media
         }
         launch_date_unix
       }
@@ -268,7 +267,6 @@ public final class LaunchDetailsQuery: GraphQLQuery {
             GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
             GraphQLField("flickr_images", type: .list(.scalar(String.self))),
             GraphQLField("video_link", type: .scalar(String.self)),
-            GraphQLField("reddit_media", type: .scalar(String.self)),
           ]
         }
 
@@ -278,8 +276,8 @@ public final class LaunchDetailsQuery: GraphQLQuery {
           self.resultMap = unsafeResultMap
         }
 
-        public init(flickrImages: [String?]? = nil, videoLink: String? = nil, redditMedia: String? = nil) {
-          self.init(unsafeResultMap: ["__typename": "LaunchLinks", "flickr_images": flickrImages, "video_link": videoLink, "reddit_media": redditMedia])
+        public init(flickrImages: [String?]? = nil, videoLink: String? = nil) {
+          self.init(unsafeResultMap: ["__typename": "LaunchLinks", "flickr_images": flickrImages, "video_link": videoLink])
         }
 
         public var __typename: String {
@@ -306,15 +304,6 @@ public final class LaunchDetailsQuery: GraphQLQuery {
           }
           set {
             resultMap.updateValue(newValue, forKey: "video_link")
-          }
-        }
-
-        public var redditMedia: String? {
-          get {
-            return resultMap["reddit_media"] as? String
-          }
-          set {
-            resultMap.updateValue(newValue, forKey: "reddit_media")
           }
         }
       }
