@@ -67,8 +67,15 @@ private struct LaunchesBodyView<ViewModel: LaunchesViewModel>: View {
     }
 }
 
-//struct LaunchesView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        LaunchesView()
-//    }
-//}
+struct LaunchesView_Previews: PreviewProvider {
+    
+    private static let viewModel: LaunchesViewModelMock = {
+        let viewModel = LaunchesViewModelMock()
+        viewModel.viewState = .content(.fixture())
+        return viewModel
+    }()
+    
+    static var previews: some View {
+        LaunchesView(viewModel: viewModel)
+    }
+}
