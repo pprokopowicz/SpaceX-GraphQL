@@ -9,4 +9,5 @@ import Foundation
 
 enum MappingError: Error {
     case optionalProperty
+    case wrongFormat
 }

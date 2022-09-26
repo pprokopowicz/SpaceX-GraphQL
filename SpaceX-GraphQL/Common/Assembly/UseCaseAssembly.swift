@@ -16,5 +16,12 @@ struct UseCaseAssembly: Assembly {
                 repository: resolver.resolve(LaunchRepository.self)!
             )
         }
+        
+        container.register(LaunchDetailsUseCase.self) { (resolver: Swinject.Resolver) in
+            LaunchDetailsUseCaseImpl(
+                mapper: resolver.resolve(LaunchDetailsMapper.self)!,
+                repository: resolver.resolve(LaunchRepository.self)!
+            )
+        }
     }
 }

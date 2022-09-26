@@ -6,6 +6,9 @@ query LaunchDetails($id: ID!) {
     rocket {
       rocket_name
       rocket_type
+      rocket {
+        id
+      }
     }
     links {
       flickr_images
