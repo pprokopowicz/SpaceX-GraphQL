@@ -50,6 +50,7 @@
 		24A4C72728E1F3D100E210B7 /* LaunchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A4C72628E1F3D100E210B7 /* LaunchDetailsView.swift */; };
 		24A4C72928E1F3DE00E210B7 /* LaunchDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A4C72828E1F3DE00E210B7 /* LaunchDetailsViewModel.swift */; };
 		24A4C72B28E1F40200E210B7 /* LaunchDetailsViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A4C72A28E1F40200E210B7 /* LaunchDetailsViewModelImpl.swift */; };
+		24A4C72D28E1F7D500E210B7 /* ViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A4C72C28E1F7D500E210B7 /* ViewAssembly.swift */; };
 		24AF098928DE31A40030EDCF /* SpaceX_GraphQLApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AF098828DE31A40030EDCF /* SpaceX_GraphQLApp.swift */; };
 		24AF098B28DE31A40030EDCF /* LaunchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AF098A28DE31A40030EDCF /* LaunchesView.swift */; };
 		24AF098D28DE31A50030EDCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24AF098C28DE31A50030EDCF /* Assets.xcassets */; };
@@ -99,6 +100,7 @@
 		24A4C72628E1F3D100E210B7 /* LaunchDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailsView.swift; sourceTree = "<group>"; };
 		24A4C72828E1F3DE00E210B7 /* LaunchDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailsViewModel.swift; sourceTree = "<group>"; };
 		24A4C72A28E1F40200E210B7 /* LaunchDetailsViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailsViewModelImpl.swift; sourceTree = "<group>"; };
+		24A4C72C28E1F7D500E210B7 /* ViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAssembly.swift; sourceTree = "<group>"; };
 		24AF098528DE31A40030EDCF /* SpaceX-GraphQL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpaceX-GraphQL.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24AF098828DE31A40030EDCF /* SpaceX_GraphQLApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceX_GraphQLApp.swift; sourceTree = "<group>"; };
 		24AF098A28DE31A40030EDCF /* LaunchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesView.swift; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 				2483629228DEFE6900413A91 /* MapperAssembly.swift */,
 				2483629428DEFE9100413A91 /* UseCaseAssembly.swift */,
 				2483629628DEFECC00413A91 /* ViewModelAssembly.swift */,
+				24A4C72C28E1F7D500E210B7 /* ViewAssembly.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 				2483628028DEF20D00413A91 /* PastLaunchMapper.swift in Sources */,
 				2483628F28DEFD2B00413A91 /* CoreAssembly.swift in Sources */,
 				244F6AC228E1A0D1000F5EF7 /* LaunchDetailsMapper.swift in Sources */,
+				24A4C72D28E1F7D500E210B7 /* ViewAssembly.swift in Sources */,
 				2483628228DEF2D500413A91 /* MappingError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

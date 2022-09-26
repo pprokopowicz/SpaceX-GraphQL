@@ -13,5 +13,12 @@ struct ViewModelAssembly: Assembly {
         container.register(LaunchesViewModelImpl.self) { (resolver: Swinject.Resolver) in
             LaunchesViewModelImpl(pastLaunchesUseCase: resolver.resolve(PastLaunchUseCase.self)!)
         }
+        
+        container.register(LaunchDetailsViewModelImpl.self) { (resolver: Swinject.Resolver, launchId: String) in
+            LaunchDetailsViewModelImpl(
+                launchId: launchId,
+                launchDetailsUseCase: resolver.resolve(LaunchDetailsUseCase.self)!
+            )
+        }
     }
 }

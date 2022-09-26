@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import Swinject
 
 protocol ViewFactory {
     associatedtype V: View
@@ -14,15 +15,18 @@ protocol ViewFactory {
 }
 
 final class ViewFactoryImpl: ViewFactory {
+    
+    private let resolver: Swinject.Resolver
+    
+    init(resolver: Swinject.Resolver) {
+        self.resolver = resolver
+    }
+    
     @ViewBuilder
     func view(for route: Route) -> some View {
         switch route {
         case .launchDetails(let id):
-            Text(id)
-        case .test:
-            Button("TEST") {
-                print("TEST")
-            }
+            resolver.resolve(LaunchDetailsView<LaunchDetailsViewModelImpl>.self, argument: id)!
         }
     }
 }

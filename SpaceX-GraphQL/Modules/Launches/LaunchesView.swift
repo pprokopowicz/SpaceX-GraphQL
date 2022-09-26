@@ -16,12 +16,12 @@ struct LaunchesView<ViewModel: LaunchesViewModel>: View {
     }
     
     var body: some View {
-        LaunchesViewBody(viewModel: viewModel)
+        LaunchesBodyView(viewModel: viewModel)
     }
 }
 
 
-fileprivate struct LaunchesViewBody<ViewModel: LaunchesViewModel>: View {
+fileprivate struct LaunchesBodyView<ViewModel: LaunchesViewModel>: View {
     
     // MARK: - Property
     

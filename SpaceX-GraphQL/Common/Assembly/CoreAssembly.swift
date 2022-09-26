@@ -19,6 +19,14 @@ struct CoreAssembly: Assembly {
         container.register(Network.self) { (resolver: Swinject.Resolver) in
             NetworkImpl(apollo: resolver.resolve(ApolloClient.self)!)
         }.inObjectScope(.container)
+        
+        container.register(ViewFactoryImpl.self) { (resolver: Swinject.Resolver) in
+            ViewFactoryImpl(resolver: resolver)
+        }.inObjectScope(.container)
+        
+        container.register(NavigationCoordinatorImpl.self) { (_) in
+            NavigationCoordinatorImpl()
+        }
     }
     
 }
