@@ -23,7 +23,7 @@ final class LaunchesViewModelImpl: LaunchesViewModel {
     
     // MARK: - Property
     
-    @Published private(set) var viewState: ViewState<PastLaunchesScreenItem>
+    @Published private(set) var viewState: ViewState<LaunchesScreenItem>
     
     private var didViewAppear: Bool
     private var launches: [PastLaunch]
@@ -81,8 +81,8 @@ final class LaunchesViewModelImpl: LaunchesViewModel {
     }
     
     private func feedView() {
-        let launchItems = launches.map { PastLaunchItem(id: $0.id, missionName: $0.missionName) }
-        let item = PastLaunchesScreenItem(pastLaunches: launchItems, hasMoreItems: currentOffset % Constant.limit == 0)
+        let launchItems = launches.map { LaunchListItem(id: $0.id, missionName: $0.missionName) }
+        let item = LaunchesScreenItem(pastLaunches: launchItems, hasMoreItems: currentOffset % Constant.limit == 0)
         viewState = .content(item)
     }
     

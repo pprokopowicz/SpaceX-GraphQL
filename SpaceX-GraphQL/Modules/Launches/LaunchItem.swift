@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct PastLaunchesScreenItem: Equatable {
-    let pastLaunches: [PastLaunchItem]
+struct LaunchesScreenItem: Equatable {
+    let pastLaunches: [LaunchListItem]
     let hasMoreItems: Bool
 }
 
-struct PastLaunchItem: Identifiable, Equatable {
+struct LaunchListItem: Identifiable, Equatable {
     let id: String
     let missionName: String
 }
