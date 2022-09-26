@@ -54,6 +54,8 @@
 		24A4C73128E211F400E210B7 /* LaunchesViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A4C73028E211F400E210B7 /* LaunchesViewModelMock.swift */; };
 		24A4C73428E212A800E210B7 /* LaunchesScreenItem+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A4C73328E212A800E210B7 /* LaunchesScreenItem+Fixture.swift */; };
 		24A4C73628E212B500E210B7 /* LaunchListItem+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A4C73528E212B500E210B7 /* LaunchListItem+Fixture.swift */; };
+		24A4C73828E2146200E210B7 /* Asset+SFSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A4C73728E2146200E210B7 /* Asset+SFSymbols.swift */; };
+		24A4C73A28E214AF00E210B7 /* Image+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A4C73928E214AF00E210B7 /* Image+Additions.swift */; };
 		24AF098928DE31A40030EDCF /* SpaceX_GraphQLApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AF098828DE31A40030EDCF /* SpaceX_GraphQLApp.swift */; };
 		24AF098B28DE31A40030EDCF /* LaunchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AF098A28DE31A40030EDCF /* LaunchesView.swift */; };
 		24AF098D28DE31A50030EDCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24AF098C28DE31A50030EDCF /* Assets.xcassets */; };
@@ -107,6 +109,8 @@
 		24A4C73028E211F400E210B7 /* LaunchesViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesViewModelMock.swift; sourceTree = "<group>"; };
 		24A4C73328E212A800E210B7 /* LaunchesScreenItem+Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LaunchesScreenItem+Fixture.swift"; sourceTree = "<group>"; };
 		24A4C73528E212B500E210B7 /* LaunchListItem+Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LaunchListItem+Fixture.swift"; sourceTree = "<group>"; };
+		24A4C73728E2146200E210B7 /* Asset+SFSymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Asset+SFSymbols.swift"; sourceTree = "<group>"; };
+		24A4C73928E214AF00E210B7 /* Image+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Additions.swift"; sourceTree = "<group>"; };
 		24AF098528DE31A40030EDCF /* SpaceX-GraphQL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpaceX-GraphQL.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24AF098828DE31A40030EDCF /* SpaceX_GraphQLApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceX_GraphQLApp.swift; sourceTree = "<group>"; };
 		24AF098A28DE31A40030EDCF /* LaunchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesView.swift; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 		243F8CCC28DF12AE00916539 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				24A4C73928E214AF00E210B7 /* Image+Additions.swift */,
 				24A4C71E28E1DA1300E210B7 /* PassthroughSubject+Additions.swift */,
 				24605F7B28DE4E6200C79BCC /* Publisher+Additions.swift */,
 			);
@@ -356,6 +361,7 @@
 			children = (
 				24AF098C28DE31A50030EDCF /* Assets.xcassets */,
 				24AF099628DE31AE0030EDCF /* schema.json */,
+				24A4C73728E2146200E210B7 /* Asset+SFSymbols.swift */,
 			);
 			path = Asset;
 			sourceTree = "<group>";
@@ -563,6 +569,7 @@
 				24A4C72328E1F23100E210B7 /* NavigationProviderViewModifier.swift in Sources */,
 				244F6AC528E1A257000F5EF7 /* RocketMapper.swift in Sources */,
 				2483629528DEFE9100413A91 /* UseCaseAssembly.swift in Sources */,
+				24A4C73828E2146200E210B7 /* Asset+SFSymbols.swift in Sources */,
 				24605F7C28DE4E6200C79BCC /* Publisher+Additions.swift in Sources */,
 				2483627D28DEF1F600413A91 /* PastLaunch.swift in Sources */,
 				243F8CCF28DF13A200916539 /* LaunchesViewModel.swift in Sources */,
@@ -573,6 +580,7 @@
 				24A4C72928E1F3DE00E210B7 /* LaunchDetailsViewModel.swift in Sources */,
 				244F6ACE28E1B6A1000F5EF7 /* Route.swift in Sources */,
 				244F6ACA28E1B20D000F5EF7 /* LaunchDetailsUseCase.swift in Sources */,
+				24A4C73A28E214AF00E210B7 /* Image+Additions.swift in Sources */,
 				2483628528DEF33100413A91 /* PastLaunchUseCase.swift in Sources */,
 				24A4C73628E212B500E210B7 /* LaunchListItem+Fixture.swift in Sources */,
 				24A4C73128E211F400E210B7 /* LaunchesViewModelMock.swift in Sources */,

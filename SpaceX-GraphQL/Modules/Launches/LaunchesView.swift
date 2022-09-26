@@ -44,8 +44,16 @@ private struct LaunchesBodyView<ViewModel: LaunchesViewModel>: View {
             case .content(let item):
                 List {
                     ForEach(item.pastLaunches) { launch in
-                        Button(launch.missionName) {
-                            viewModel.handle(action: .launch(launch))
+                        HStack {
+                            Button {
+                                viewModel.handle(action: .launch(launch))
+                            } label: {
+                                HStack {
+                                    Text(launch.missionName)
+                                    Spacer()
+                                    Image(Asset.System.chevronRight)
+                                }
+                            }
                         }
                     }
                     
@@ -54,7 +62,6 @@ private struct LaunchesBodyView<ViewModel: LaunchesViewModel>: View {
                         .onAppear {
                             viewModel.handle(action: .nextPage)
                         }
-                    
                         .isRemoved(!item.hasMoreItems)
                 }
             }
@@ -76,6 +83,8 @@ struct LaunchesView_Previews: PreviewProvider {
     }()
     
     static var previews: some View {
-        LaunchesView(viewModel: viewModel)
+        NavigationStack {
+            LaunchesView(viewModel: viewModel)
+        }
     }
 }
